@@ -1,8 +1,8 @@
-a = int(input('введите число: '))
-b = a % 10
+mlist = str(input("Введите строку разделенную пробелами: ")).split()
 
-while a > 0:
-    a = a // 10
-    if a % 10 > b:
-        b = a % 10
-print(f'Самое большое число: {b}')
+for i in range(len(mlist)):
+    if len(mlist[i]) > 10:
+        mlist[i] = mlist[i][:10]
+    print(f'{i + 1}) {mlist[i]}')
+
+input("Чтобы закрыть нажмите Enter ")
