@@ -1,14 +1,7 @@
-n = int(input('введите выручку: '))
-m = int(input('введите издержки: '))
+from functools import reduce
 
-a = n - m
+mlist = []
+[mlist.append(i) for i in range(100, 1001) if i % 2 == 0]
 
-if a > 0:
-    print(f'У Вас прибыльная компания, рентабельность выручки составила {a/n*100:.0f}%')
-    t = int(input('сколько сотрудников у вас работает? '))
-    print(f'Каждый сотрудник принес вам {a / t:.0f} миллионов')
-
-else:
-    print(f'Ваша компания не принесла прибыли. Убытки сотавили {m - n} миллионов')
-
-input("Нажмите enter чтобы закрыть")
+print(mlist)
+print(reduce(lambda x, y: x * y, mlist))

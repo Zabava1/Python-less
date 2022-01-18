@@ -1,11 +1,3 @@
-n = int(input('введите число: '))
-i = 0
-a = n
-while a > 0:
-    a = a // 10
-    i += 1
-b = (n * 3) + ((10 ** i) * 2 * n) + (100 ** i) * n
+newlist = [i for i in range(20, 241) if i % 20 == 0 or i % 21 == 0]
 
-print(b)
-
-input("закрыть: ")
+print(newlist)

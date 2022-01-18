@@ -1,11 +1,17 @@
-a = float(input('Сколько километров спортсмен пробежал в первый день? '))
-b = float(input('Какого результата вы ждете от него? (количество километров) '))
-i = 0
+from itertools import count, cycle
 
-while a < b:
-    a = a * 1.1
-    i += 1
+mlist = []
+for i in count(3, 2):
+    if i > 14:
+        break
+    else:
+        mlist.append(i)
+print(mlist)
 
-print(f'На {i} день спорцмен достигнет результата {a:.1f} километров')
-
-input("Нажмите enter чтобы закрыть")
+t = 0
+for i in cycle(mlist):
+    if t > 10:
+        break
+    else:
+        print(i)
+        t += 1

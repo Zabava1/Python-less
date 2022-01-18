@@ -1,10 +1,5 @@
-n = int(input('Сколько вам лет? '))
-m = str(input('Замужем? (да/нет) '))
-t = str(input('Сколько детей? (количество, если нету тогда просто "нет")'))
+from sys import argv
 
-if m == 'да':
-    print(f"Вам {n} лет. Вы замужем, и у вас {t} детей")
-else:
-    print(f"Вам {n} лет. Вы не замужем, и у вас {t} детей. Познакомимся?)")
+name, vyrabot, stavka, premia = argv
 
-input("Нажмите enter чтобы закрыть")
+print("Заработная плата сотруднику = ", int(vyrabot) * int(stavka) + int(premia))
